@@ -4,9 +4,8 @@
   "description": "Admin Clik Mobile App",
   "main": "index.js",
   "scripts": {
-    "prebuild": "cd full && npm install",
-    "build": "cd full && npm run build",
-    "start": "cd full && npm start",
+    "build": "cd full && npm install && vite build && esbuild server/index.js --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "start": "cd full && NODE_ENV=production node dist/index.js",
     "sync": "npx cap sync"
   },
   "dependencies": {
