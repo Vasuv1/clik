@@ -1,0 +1,23 @@
+{
+  "name": "admin-clik",
+  "version": "1.0.0",
+  "description": "Admin Clik Mobile App",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "cd full && npm install",
+    "build": "cd full && npm run build",
+    "start": "cd full && npm start",
+    "sync": "npx cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.5.0",
+    "@capacitor/app": "^5.0.7",
+    "@capacitor/core": "^5.5.0",
+    "@capacitor/splash-screen": "^5.0.7",
+    "@capacitor/status-bar": "^5.0.7"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.5.0",
+    "typescript": "^5.3.3"
+  }
+}

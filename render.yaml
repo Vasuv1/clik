@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: admin-clik-backend
+    env: node
+    buildCommand: cd full && npm install && npm run build
+    startCommand: cd full && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 3001
+
+  - type: static
+    name: admin-clik-frontend
+    buildCommand: cd full && npm install && npm run build
+    staticPublishPath: ./full/dist/public 

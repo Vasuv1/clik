@@ -1,0 +1,33 @@
+{
+  "appId": "com.clikbuds.app",
+  "appName": "Admin Clik",
+  "webDir": "full/dist/public",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true,
+    "allowNavigation": ["*"]
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "release-key.keystore",
+      "keystorePassword": "your-keystore-password",
+      "keystoreAlias": "key-alias",
+      "keystoreAliasPassword": "key-password"
+    }
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "androidSpinnerStyle": "large",
+      "spinnerColor": "#999999"
+    },
+    "StatusBar": {
+      "style": "dark",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}
