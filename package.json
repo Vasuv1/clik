@@ -6,8 +6,8 @@
   "scripts": {
     "dev:server": "node --watch ./full/server/index.js",
     "dev": "node --watch ./full/server/index.js",
-    "prebuild": "npm install -g esbuild && pwd && ls -la && mkdir -p build && cp -r ./full/server/* ./build/ || (cd full && cp -r server/* ../build/)",
-    "build": "ls -la && cd build && esbuild index.js --platform=node --bundle --external:express --external:mongoose --external:cors --external:dotenv --external:express-session --external:memorystore --format=esm --outdir=../dist --allow-overwrite",
+    "prebuild": "npm install -g esbuild",
+    "build": "esbuild ./full/server/index.js --platform=node --bundle --external:express --external:mongoose --external:cors --external:dotenv --external:express-session --external:memorystore --format=esm --outdir=./dist --allow-overwrite",
     "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
