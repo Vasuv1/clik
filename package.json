@@ -6,7 +6,7 @@
   "scripts": {
     "dev:server": "node --watch ./full/server/index.js",
     "dev": "node --watch ./full/server/index.js",
-    "build": "npx esbuild ./full/server/index.js --platform=node --packages=external --bundle --format=esm --outdir=./dist",
+    "build": "npm install -g esbuild && esbuild ./full/server/index.js --platform=node --packages=external --bundle --format=esm --outdir=./dist",
     "start": "NODE_ENV=production node ./dist/index.js"
   },
   "dependencies": {
@@ -15,8 +15,7 @@
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "memorystore": "^1.6.7",
-    "mongoose": "^8.12.1",
-    "esbuild": "^0.25.0"
+    "mongoose": "^8.12.1"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
