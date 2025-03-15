@@ -1,23 +1,24 @@
 {
   "name": "admin-clik",
   "version": "1.0.0",
+  "type": "module",
   "description": "Admin Clik Mobile App",
-  "main": "index.js",
   "scripts": {
-    "build": "cd full && npm install && esbuild server/index.js --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "start": "cd full && NODE_ENV=production node dist/index.js",
-    "sync": "npx cap sync"
+    "dev:server": "node --watch full/server/index.js",
+    "dev": "node --watch full/server/index.js",
+    "build": "esbuild full/server/index.js --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
-    "@capacitor/android": "^5.5.0",
-    "@capacitor/app": "^5.0.7",
-    "@capacitor/core": "^5.5.0",
-    "@capacitor/splash-screen": "^5.0.7",
-    "@capacitor/status-bar": "^5.0.7",
-    "esbuild": "^0.25.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "memorystore": "^1.6.7",
+    "mongoose": "^8.12.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "^5.5.0",
+    "esbuild": "^0.25.0",
     "typescript": "^5.3.3"
   }
 }
