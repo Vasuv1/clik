@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.clikbuds.app"
-    compileSdk rootProject.ext.compileSdkVersion
+    compileSdk 33
     
     signingConfigs {
         release {
